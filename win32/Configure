@@ -222,8 +222,8 @@ my %makefile_subs = (
                                "/Zi " .
                                "/nologo " .
                ($config eq "release" ?
-                "/MD  /D NDEBUG /O2 " :
-                "/MDd /D _DEBUG /Od /Gm ")
+                "/MT  /D NDEBUG /O2 " :
+                "/MTd /D _DEBUG /Od /Gm ")
              ],
     "lfl" => [ "^LDFLAGS=",    "LDFLAGS=" .
                                ($config eq "debug" ? "/debug " : "") .
